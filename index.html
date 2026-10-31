@@ -43,6 +43,8 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      margin: 0;
+      padding: 0;
     }
 
     .mobile-container {
@@ -55,6 +57,7 @@
       overflow-x: hidden;
       color: #fff;
     }
+    
 
     /* Floating Hearts Background */
     .heart-particle {
@@ -223,22 +226,26 @@
     .calendar-table td {
       padding: 8px 4px;
       text-align: center;
-      color: #444;
+      color: #000000;
     }
     .calendar-table td.wedding-day {
       background: var(--accent-red);
-      color: #fff;
-      font-weight: 700;
+      color: #fce1e1;
+      font-weight: 800;
       border-radius: 50%;
+    }
+    .other-month {
+      color: #cccccc !important; /* 연한 회색빛으로 변경 */
+      opacity: 20; /* 투명도를 주어 더 은은하게 처리 */
     }
 
    /* D-Day 카운트다운 스타일 */
 .dday-container {
   text-align: center;
-  padding: 30px 20px;
+  padding: 20px 20px;
   background-color: var(--paper-cream, #f9f5eb);
   border-radius: 12px;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .dday-title {
@@ -250,31 +257,35 @@
 
 .dday-timer {
   display: flex;
-  justify-content: center;
-  gap: 12px;
+  justify-content: space-between; /* 4개 박스를 화면에 딱 맞게 분배 */
+  gap: 6px; /* 박스 사이 간격 줄임 */
 }
 
 .timer-box {
+  flex: 1; /* 4개가 동일한 비율로 너비 차지 */
+  min-width: 0; /* 글자가 커도 박스가 튕겨나가지 않게 방지 */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #ffffff;
-  padding: 10px;
-  border-radius: 8px;
-  min-width: 60px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 8px 2px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 .timer-box span {
-  font-size: 1.4rem;
+  font-size: 1.1rem; /* 숫자가 깨지지 않도록 모바일에 맞춘 크기 */
   font-weight: bold;
-  color: var(--bg-burgundy, #702737);
+  color: #702737;
+  line-height: 1.2;
 }
 
 .timer-box small {
-  font-size: 0.65rem;
+ font-size: 0.55rem;
   color: #888888;
-  margin-top: 4px;
+  margin-top: 3px;
+  letter-spacing: 0.5px;
 }
 
     /* Stamp Style Gallery Grid */
@@ -618,7 +629,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+              <td class="other-month">31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
             </tr>
             <tr>
               <td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
@@ -630,7 +641,7 @@
               <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
             </tr>
             <tr>
-              <td class="wedding-day">28</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+              <td class="wedding-day">28</td><td class="other-month">1</td><td class="other-month">2</td><td class="other-month">3</td><td class="other-month">4</td><td class="other-month">5</td><td class="other-month">6</td>
             </tr>
           </tbody>
         </table>
