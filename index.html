@@ -27,7 +27,7 @@
       --font-hand: 'Caveat', 'Dancing Script', cursive;
       --font-sans: 'Great Vibes', sans-serif;
     }
-
+ㅁ
     * {
       box-sizing: border-box;
       margin: 0;
@@ -232,34 +232,50 @@
       border-radius: 50%;
     }
 
-    /* D-Day Counter */
-    .d-day-container {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 25px;
-    }
+   /* D-Day 카운트다운 스타일 */
+.dday-container {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--paper-cream, #f9f5eb);
+  border-radius: 12px;
+  margin: 20px 0;
+}
 
-    .d-day-box {
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 8px;
-      padding: 10px 8px;
-      min-width: 65px;
-    }
+.dday-title {
+  font-size: 1rem;
+  color: var(--bg-burgundy, #702737);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
 
-    .d-day-num {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--paper-cream);
-    }
+.dday-timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
 
-    .d-day-label {
-      font-size: 10px;
-      color: #ddd;
-      margin-top: 2px;
-    }
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 60px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.timer-box span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--bg-burgundy, #702737);
+}
+
+.timer-box small {
+  font-size: 0.65rem;
+  color: #888888;
+  margin-top: 4px;
+}
 
     /* Stamp Style Gallery Grid */
     .stamp-grid {
@@ -615,11 +631,26 @@
         </table>
       </div>
 
-      <div class="d-day-container">
-        <div class="d-day-box"><div class="d-day-num" id="d-day">0</div><div class="d-day-label">DAYS</div></div>
-        <div class="d-day-box"><div class="d-day-num" id="hours">00</div><div class="d-day-label">HOURS</div></div>
-        <div class="d-day-box"><div class="d-day-num" id="minutes">00</div><div class="d-day-label">MINS</div></div>
-        <div class="d-day-box"><div class="d-day-num" id="seconds">00</div><div class="d-day-label">SECS</div></div>
+     <div class="dday-container">
+        <p class="dday-title">예식일까지 남은 시간</p>
+          <div class="dday-timer">
+            <div class="timer-box">
+              <span id="days">00</span>
+              <small>DAYS</small>
+            </div>
+            <div class="timer-box">
+              <span id="hours">00</span>
+              <small>HOURS</small>
+            </div>
+            <div class="timer-box">
+              <span id="minutes">00</span>
+            <small>MINS</small>
+            </div>
+            <div class="timer-box">
+              <span id="seconds">00</span>
+              <small>SECS</small>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -843,33 +874,32 @@
   <div class="toast" id="toast">알림 메시지</div>
 
   <script>
-    // 1. D-Day Countdown Timer
-    const targetDate = new Date('2026-10-31T12:00:00').getTime();
+   // 결혼식 날짜 및 시간 설정 (2027년 2월 28일 10:30:00)
+  const weddingDate = new Date("2027-02-28T10:30:00").getTime();
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+  function updateDday() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-      if (distance < 0) {
-        document.getElementById('d-day').innerText = '0';
-        document.getElementById('hours').innerText = '00';
-        document.getElementById('minutes').innerText = '00';
-        document.getElementById('seconds').innerText = '00';
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById('d-day').innerText = days;
-      document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
-      document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
-      document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+    if (distance < 0) {
+      document.querySelector(".dday-container").innerHTML = "<p class='dday-title'>🎉 결혼식이 진행 중입니다! 🎉</p>";
+      return;
     }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = String(days).padStart(2, "0");
+    document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+  }
+
+  // 매초 실행
+  updateDday();
+  setInterval(updateDday, 1000);
 
     // 2. Falling Hearts
     function createHeart() {
