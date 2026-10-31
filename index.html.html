@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta property="og:title" content="임준영 & 전수진의 결혼식에 초대합니다" />
+  <meta property="og:description" content="2026년 10월 31일 토요일 오후 12시" />
+  <meta property="og:image" content="./image/1.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>임준영 & 전수진의 결혼식에 초대합니다</title>
+  
+  <!-- 구글 폰트: 나눔명조 & 손글씨 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@700&family=Gamja Flower:wght@400;700;800&family=Great Vibes:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Global Theme Styles */
+    :root {
+      --bg-burgundy: #702737;
+      --bg-burgundy-dark: #320d15;
+      --paper-cream: #f9f5eb;
+      --paper-cream-dark: #efe8d5;
+      --text-dark: #2b2224;
+      --accent-red: #8b1d2c;
+      --gold-accent: #d4af37;
+      --font-serif: 'Gamja Flower', serif;
+      --font-hand: 'Caveat', 'Dancing Script', cursive;
+      --font-sans: 'Great Vibes', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #111;
+      font-family: var(--font-sans);
+      color: var(--text-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .mobile-container {
+      width: 100%;
+      max-width: 430px;
+      background-color: var(--bg-burgundy);
+      min-height: 100vh;
+      box-shadow: 0 0 30px rgba(0,0,0,0.8);
+      position: relative;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    /* Floating Hearts Background */
+    .heart-particle {
+      position: absolute;
+      top: -20px;
+      color: rgba(230, 90, 110, 0.6);
+      font-size: 16px;
+      pointer-events: none;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Cover Section */
+    .section-cover {
+      position: relative;
+      background: var(--paper-cream);
+      color: var(--text-dark);
+      padding: 45px 20px 35px;
+      text-align: center;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      z-index: 2;
+    }
+
+    .cover-subtitle {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      letter-spacing: 3px;
+      color: var(--accent-red);
+      margin-bottom: 6px;
+    }
+
+    .cover-title {
+      font-family: var(--font-hand);
+      font-size: 30px;
+      color: var(--accent-red);
+      line-height: 1.1;
+      margin-bottom: 25px;
+    }
+
+    .couple-photo-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .photo-card {
+      width: 46%;
+      background: #fff;
+      padding: 8px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+      transform: rotate(-3deg);
+    }
+
+    .photo-card:nth-child(2) {
+      transform: rotate(3deg);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .sticker-overlay {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 26px;
+      z-index: 3;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    }
+
+    .couple-names {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 700;
+      margin-top: 15px;
+      color: var(--text-dark);
+    }
+
+    /* Sections Shared Styling */
+    .section {
+      padding: 55px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-title-hand {
+      font-family: var(--font-hand);
+      font-size: 48px;
+      color: var(--paper-cream);
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    .section-subtitle-serif {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--paper-cream);
+      margin-bottom: 12px;
+    }
+
+    /* Greeting & Parents */
+    .greeting-text {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      line-height: 2.1;
+      color: #ebdcd0;
+      margin: 25px 0;
+    }
+
+    .parents-info {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      border-bottom: 1px dashed rgba(255,255,255,0.2);
+      padding: 22px 0;
+      margin-top: 25px;
+      line-height: 2;
+    }
+
+    /* Calendar & Lace Date Card */
+    .lace-card {
+      background: var(--paper-cream);
+      color: var(--text-dark);
+      padding: 25px 20px;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 340px;
+      box-shadow: inset 0 0 0 8px #fff, 0 10px 25px rgba(0,0,0,0.4);
+      border: 2px dashed #d0c0a0;
+    }
+
+    .date-text-main {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--accent-red);
+    }
+
+    /* Mini Calendar UI */
+    .calendar-table {
+      width: 100%;
+      margin-top: 15px;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .calendar-table th {
+      padding: 6px;
+      color: var(--accent-red);
+      font-weight: 700;
+    }
+    .calendar-table td {
+      padding: 8px 4px;
+      text-align: center;
+      color: #444;
+    }
+    .calendar-table td.wedding-day {
+      background: var(--accent-red);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 50%;
+    }
+
+    /* D-Day Counter */
+    .d-day-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .d-day-box {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 10px 8px;
+      min-width: 65px;
+    }
+
+    .d-day-num {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--paper-cream);
+    }
+
+    .d-day-label {
+      font-size: 10px;
+      color: #ddd;
+      margin-top: 2px;
+    }
+
+    /* Stamp Style Gallery Grid */
+    .stamp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .stamp-item {
+      background: var(--paper-cream);
+      padding: 10px 10px 14px 10px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .stamp-item:hover {
+      transform: scale(1.03);
+    }
+
+    .stamp-item img {
+      width: 100%;
+      height: 135px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .stamp-label {
+      font-family: var(--font-serif);
+      font-size: 10px;
+      color: #666;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* Location & Traffic */
+    .map-box {
+      width: 100%;
+      height: 190px;
+      background: #e2d7c5;
+      border-radius: 12px;
+      margin: 20px 0 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    .traffic-info {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+
+    .traffic-title {
+      font-weight: 700;
+      color: var(--paper-cream);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Accordion Accounts */
+    .account-accordion {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      margin-top: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .accordion-header {
+      padding: 16px 20px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background: rgba(0,0,0,0.15);
+      color: var(--paper-cream);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .account-row {
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 13px;
+      text-align: left;
+    }
+
+    /* Guestbook Section */
+    .guestbook-list {
+      margin-top: 20px;
+      max-height: 220px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .guestbook-card {
+      background: var(--paper-cream);
+      color: var(--text-dark);
+      padding: 12px 15px;
+      border-radius: 8px;
+      text-align: left;
+      font-size: 13px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .guestbook-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: var(--accent-red);
+    }
+
+    .guestbook-form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .guestbook-input {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 13px;
+    }
+
+    /* Universal Buttons */
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .btn {
+      background: var(--paper-cream);
+      color: var(--text-dark);
+      border: none;
+      padding: 12px 18px;
+      border-radius: 25px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-red {
+      background: var(--accent-red);
+      color: #fff;
+    }
+
+    .btn-copy {
+      background: var(--accent-red);
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    /* RSVP & Lightbox Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.75);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: var(--paper-cream);
+      color: var(--text-dark);
+      padding: 25px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #555;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    .modal-close {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 13px;
+      z-index: 200;
+      transition: transform 0.3s ease;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 150;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mobile-container">
+    
+    <!-- Falling Hearts Effect -->
+    <div id="hearts-container"></div>
+
+    <!-- 1. COVER SECTION -->
+    <section class="section-cover">
+      <div class="cover-subtitle">결혼합니다!</div>
+      <div class="cover-title">Together is a beautiful place to be</div>
+
+      <div class="couple-photo-wrap">
+        <div class="sticker-overlay">❤️</div>
+        <div class="photo-card">
+          <img src="./image/임준영 7명.jpg" alt="신랑 임준영" />
+        </div>
+        <div class="photo-card">
+          <img src="./image/4.jpg" alt="신부 전수진" />
+        </div>
+      </div>
+
+      <div class="couple-names">
+        신랑 임준영 &nbsp;•&nbsp; 신부 전수진
+      </div>
+    </section>
+
+    <!-- 2. GREETING SECTION -->
+    <section class="section">
+      <div class="section-subtitle-serif">초대의 글</div>
+      <p class="greeting-text">
+        소슬한 가을 바람이 좋은 날,<br/>
+        서로의 따뜻한 체온이 되어줄<br/>
+        두 사람이 인연을 맺으려 합니다.<br/><br/>
+        함께하는 첫 걸음에<br/>
+        귀한 걸음 하시어 축복해 주시면<br/>
+        더없는 기쁨으로 간직하겠습니다.
+      </p>
+
+      <div class="parents-info">
+        임동수 • 김미라 의 아들 <strong>임준영</strong><br/>
+        전상욱 • 박순자 의 딸 <strong>전수진</strong>
+      </div>
+    </section>
+
+    <!-- 3. DATE & CALENDAR & D-DAY -->
+    <section class="section" style="padding-top: 10px;">
+      <div class="section-title-hand">Our Wedding day</div>
+
+      <div class="lace-card">
+        <div class="date-text-main">2027년 2월 28일 일요일</div>
+        <div style="font-size: 14px; color: #666;">오전 10시 30분</div>
+
+        <!-- Mini Calendar -->
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+            </tr>
+            <tr>
+              <td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+            </tr>
+            <tr>
+              <td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+            </tr>
+            <tr>
+              <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+            </tr>
+            <tr>
+              <td class="wedding-day">28</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="d-day-container">
+        <div class="d-day-box"><div class="d-day-num" id="d-day">0</div><div class="d-day-label">DAYS</div></div>
+        <div class="d-day-box"><div class="d-day-num" id="hours">00</div><div class="d-day-label">HOURS</div></div>
+        <div class="d-day-box"><div class="d-day-num" id="minutes">00</div><div class="d-day-label">MINS</div></div>
+        <div class="d-day-box"><div class="d-day-num" id="seconds">00</div><div class="d-day-label">SECS</div></div>
+      </div>
+    </section>
+
+    <!-- 4. GALLERY (STAMP STYLE 8 GRID) -->
+    <section class="section">
+      <div class="section-title-hand">Gallery</div>
+      <div style="font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 15px;">우리의 소중한 순간들</div>
+
+      <div class="stamp-grid">
+        <div class="stamp-item" onclick="openLightbox('./image/1.jpg')">
+          <img src="./image/1.jpg" alt="사진1" />
+          <div class="stamp-label">STAMP N° 01</div>
+        </div>
+        <div class="stamp-item" onclick="openLightbox('./image/10-r.jpg')">
+          <img src="./image/10-r.jpg" alt="사진2" />
+          <div class="stamp-label">STAMP N° 02</div>
+        </div>
+        <div class="stamp-item" onclick="openLightbox('./image/12.jpg')">
+          <img src="./image/12.jpg" alt="사진3" />
+          <div class="stamp-label">STAMP N° 03</div>
+        </div>
+        <div class="stamp-item" onclick="openLightbox('./image/13.jpg')">
+          <img src="./image/13.jpg" alt="사진4" />
+          <div class="stamp-label">STAMP N° 04</div>
+        </div>
+        <div class="stamp-item" onclick="openLightbox('./image/9.jpg')">
+          <img src="./image/9.jpg" alt="사진5" />
+          <div class="stamp-label">STAMP N° 05</div>
+        </div>
+        <div class="stamp-item" onclick="openLightbox('./image/8-r.jpg')">
+          <img src="./image/8-r.jpg" alt="사진6" />
+          <div class="stamp-label">STAMP N° 06</div>
+        </div>
+         <div class="stamp-item" onclick="openLightbox('./image/8.jpg')">
+          <img src="./image/8.jpg" alt="사진7" />
+          <div class="stamp-label">STAMP N° 07</div>
+        </div>
+         <div class="stamp-item" onclick="openLightbox('./image/14.jpg')">
+          <img src="./image/14.jpg" alt="사진8" />
+          <div class="stamp-label">STAMP N° 08</div>
+        </div>
+        <div class="stamp-item" onclick="openLightbox('./image/15.jpg')">
+          <img src="./image/15.jpg" alt="사진9" />
+          <div class="stamp-label">STAMP N° 09</div>
+        </div>
+        <div class="stamp-item" onclick="openLightbox('./image/보류2.jpg')">
+          <img src="./image/보류2.jpg" alt="사진10" />
+          <div class="stamp-label">STAMP N° 10</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. LOCATION & TRANSPORT -->
+    <section class="section">
+      <div class="section-subtitle-serif">오시는 길</div>
+      <div style="font-size: 14px; color: #ddd; margin-bottom: 10px;">
+        <strong>부천 터미널 소풍</strong><br/>
+        부천 터미널 소풍
+      </div>
+
+      <div class="map-box">
+        <span style="font-size: 32px; margin-bottom: 4px;">📍</span>
+        <span style="font-size: 14px; font-weight: 700;">카카오/네이버 지도 API 연동 위치</span>
+      </div>
+
+      <div class="btn-group">
+        <a href="https://map.kakao.com" target="_blank" class="btn">카카오맵</a>
+        <a href="https://map.naver.com" target="_blank" class="btn">네이버지도</a>
+        <a href="https://m.tmap.co.kr" target="_blank" class="btn">티맵</a>
+      </div>
+
+      <!-- Traffic Details -->
+      <div class="traffic-info">
+        <div class="traffic-title">🚇 지하철 안내</div>
+        <p style="color:#ccc; margin-bottom: 12px;">7호선/상동역 1번 출구 도보 5분</p>
+        
+        <div class="traffic-title">🚌 버스 안내</div>
+        <p style="color:#ccc; margin-bottom: 12px;">상동역 하차: 01, 02, 03, 04, 05 </p>
+        
+        <div class="traffic-title">🚘 자차 & 주차 안내</div>
+        <p style="color:#ccc;">건물 내 지하 2층~지하 5층 주차장 (2시간 무료 주차 지원)</p>
+      </div>
+    </section>
+
+    <!-- 6. GUESTBOOK -->
+    <section class="section">
+      <div class="section-subtitle-serif">축하 방명록</div>
+      <div style="font-size: 12px; color: rgba(255,255,255,0.7);">따뜻한 축하 한마디를 남겨주세요</div>
+
+      <div class="guestbook-list" id="guestbookList">
+        <div class="guestbook-card">
+          <div class="guestbook-header">
+            <span>임땡칠</span><span>2026.10.31</span>
+          </div>
+          <div>형 누나 너무 축하해! 행쇼!</div>
+        </div>
+        <div class="guestbook-card">
+          <div class="guestbook-header">
+            <span>전까순</span><span>2026.10.31</span>
+          </div>
+          <div>세상에서 제일 예쁜 신부 수진이 언니 축하해 ❤️</div>
+        </div>
+      </div>
+
+      <form class="guestbook-form" onsubmit="addGuestbook(event)">
+        <input type="text" id="gbName" class="guestbook-input" placeholder="작성자 성함" required />
+        <input type="text" id="gbMsg" class="guestbook-input" placeholder="축하 메시지" required />
+        <button type="submit" class="btn btn-red" style="justify-content: center; border-radius: 8px;">메시지 남기기</button>
+      </form>
+    </section>
+
+    <!-- 7. ACCOUNTS & RSVP -->
+    <section class="section">
+      <div class="section-subtitle-serif">마음 전하실 곳</div>
+
+      <div class="account-accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>신랑측 계좌번호</span><span>▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="account-row">
+            <div>
+              <div style="font-weight:700;">신한 110-421-492969</div>
+              <div style="color:#aaa;">예금주: 임준영</div>
+            </div>
+            <button class="btn-copy" onclick="copyAccount('신한 110-421-492969')">복사</button>
+          </div>
+          <div class="account-row">
+            <div>
+              <div style="font-weight:700;">농협 000-0000-1234-56</div>
+              <div style="color:#aaa;">예금주: 임동수 (부)</div>
+            </div>
+            <button class="btn-copy" onclick="copyAccount('농협 000-0000-1234-56')">복사</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="account-accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>신부측 계좌번호</span><span>▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="account-row">
+            <div>
+              <div style="font-weight:700;">국민 000-0000-1234-56</div>
+              <div style="color:#aaa;">예금주: 주영은</div>
+            </div>
+            <button class="btn-copy" onclick="copyAccount('국민 000-0000-1234-56')">복사</button>
+          </div>
+          <div class="account-row">
+            <div>
+              <div style="font-weight:700;">카카오뱅크 000-0000-1234-56</div>
+              <div style="color:#aaa;">예금주: 전상욱 (부)</div>
+            </div>
+            <button class="btn-copy" onclick="copyAccount('카카오뱅크 000-0000-1234-56')">복사</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="margin-top: 35px; display: flex; flex-direction: column; gap: 12px; align-items: center;">
+        <button class="btn btn-red" style="padding: 14px 28px; width: 85%; justify-content: center;" onclick="openModal()">
+          💌 참석 여부 전달하기 (RSVP)
+        </button>
+        <button class="btn" style="padding: 12px 28px; width: 85%; justify-content: center;" onclick="shareLink()">
+          🔗 청첩장 링크 공유하기
+        </button>
+      </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; font-size: 11px; color: rgba(255,255,255,0.4); border-top: 1px solid rgba(255,255,255,0.05);">
+      Copyright © 2026 SeungWoo & YoungEun. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- RSVP Modal -->
+  <div class="modal" id="rsvpModal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h3 style="font-family: var(--font-serif); margin-bottom: 15px; color: var(--accent-red);">참석 여부 전달</h3>
+      <form onsubmit="submitRSVP(event)">
+        <div class="form-group">
+          <label>구분</label>
+          <select required>
+            <option value="groom">신랑측 하객</option>
+            <option value="bride">신부측 하객</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>성함</label>
+          <input type="text" placeholder="성함을 입력해주세요" required />
+        </div>
+        <div class="form-group">
+          <label>동반 인원</label>
+          <select required>
+            <option value="1">본인 1명</option>
+            <option value="2">2명</option>
+            <option value="3">3명 이상</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>식사 여부</label>
+          <select required>
+            <option value="yes">식사 예정</option>
+            <option value="no">식사 안함</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-red" style="width: 100%; justify-content: center; border-radius: 8px;">
+          제출하기
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="확대 이미지" />
+  </div>
+
+  <!-- Toast Element -->
+  <div class="toast" id="toast">알림 메시지</div>
+
+  <script>
+    // 1. D-Day Countdown Timer
+    const targetDate = new Date('2026-10-31T12:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById('d-day').innerText = '0';
+        document.getElementById('hours').innerText = '00';
+        document.getElementById('minutes').innerText = '00';
+        document.getElementById('seconds').innerText = '00';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('d-day').innerText = days;
+      document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
+      document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 2. Falling Hearts
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart-particle');
+      heart.innerHTML = '♥';
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+      heart.style.fontSize = Math.random() * 10 + 12 + 'px';
+      
+      document.getElementById('hearts-container').appendChild(heart);
+
+      setTimeout(() => { heart.remove(); }, 6000);
+    }
+    setInterval(createHeart, 500);
+
+    // 3. Accordion Handler
+    function toggleAccordion(header) {
+      const content = header.nextElementSibling;
+      const isExpanded = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+      document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = '0px');
+      document.querySelectorAll('.accordion-header span:last-child').forEach(s => s.innerText = '▼');
+
+      if (!isExpanded) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        header.querySelector('span:last-child').innerText = '▲';
+      }
+    }
+
+    // 4. Toast & Copy Function
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 2500);
+    }
+
+    function copyAccount(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('계좌번호가 복사되었습니다.');
+      }).catch(() => {
+        showToast('복사 기능 오류');
+      });
+    }
+
+    function shareLink() {
+      if (navigator.share) {
+        navigator.share({
+          title: '임준영 & 전수진 결혼식에 초대합니다',
+          url: window.location.href
+        });
+      } else {
+        copyAccount(window.location.href);
+        showToast('초대장 링크가 복사되었습니다.');
+      }
+    }
+
+    // 5. Lightbox Modal
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
+    // 6. RSVP Modal
+    function openModal() { document.getElementById('rsvpModal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('rsvpModal').style.display = 'none'; }
+    function submitRSVP(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('참석 여부가 전달되었습니다. 감사합니다!');
+    }
+
+    // 7. Interactive Guestbook Add
+    function addGuestbook(e) {
+      e.preventDefault();
+      const name = document.getElementById('gbName').value;
+      const msg = document.getElementById('gbMsg').value;
+      
+      const card = document.createElement('div');
+      card.className = 'guestbook-card';
+      card.innerHTML = `
+        <div class="guestbook-header">
+          <span>${name}</span><span>방금 전</span>
+        </div>
+        <div>${msg}</div>
+      `;
+
+      const list = document.getElementById('guestbookList');
+      list.prepend(card);
+
+      document.getElementById('gbName').value = '';
+      document.getElementById('gbMsg').value = '';
+      showToast('축하 메시지가 등록되었습니다!');
+    }
+  </script>
+</body>
+</html>
