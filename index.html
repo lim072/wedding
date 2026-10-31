@@ -11,7 +11,7 @@
   <!-- 구글 폰트: 나눔명조 & 손글씨 폰트 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@700&family=Gamja Flower:wght@400;700;800&family=Great Vibes:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@700&family=Hahmlet:wght@400;700;800&family=Alex Brush:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
     /* Global Theme Styles */
@@ -21,11 +21,11 @@
       --paper-cream: #f9f5eb;
       --paper-cream-dark: #efe8d5;
       --text-dark: #2b2224;
-      --accent-red: #8b1d2c;
+      --accent-red: #a36970;
       --gold-accent: #d4af37;
-      --font-serif: 'Gamja Flower', serif;
+      --font-serif: 'Hahmlet', serif;
       --font-hand: 'Caveat', 'Dancing Script', cursive;
-      --font-sans: 'Great Vibes', sans-serif;
+      --font-sans: 'Alex Brush', sans-serif;
     }
 ㅁ
     * {
@@ -325,6 +325,11 @@
       justify-content: center;
       align-items: center;
       color: #333;
+      margin-top: 40px;
+      margin-bottom: 45px; /* 이미지 아래쪽에 여백 주기 */
+      background: none;
+      padding: 0;
+      border: none;
     }
 
     .traffic-info {
@@ -704,36 +709,36 @@
     </section>
 
     <!-- 5. LOCATION & TRANSPORT -->
-    <section class="section">
-      <div class="section-subtitle-serif">오시는 길</div>
-      <div style="font-size: 14px; color: #ddd; margin-bottom: 10px;">
-        <strong>부천 터미널 소풍</strong><br/>
-        부천 터미널 소풍
-      </div>
+   <section class="section">
+  <div class="section-subtitle-serif">오시는 길</div>
+  <div style="font-size: 14px; color: #ddd; margin-bottom: 10px;">
+    <strong>부천터미널소풍 7층 소풍컨벤션웨딩</strong><br/>
+    <p style="font-size: 20px;">베일리 홀</p>
+  </div>
 
-      <div class="map-box">
-        <span style="font-size: 32px; margin-bottom: 4px;">📍</span>
-        <span style="font-size: 14px; font-weight: 700;">카카오/네이버 지도 API 연동 위치</span>
-      </div>
+  <div class="map-box" style="background: none; padding: 0; border: none; box-shadow: none;">
+  <img src="./image/map-inner.jpg" alt="부천 터미널 소풍 오시는 길 약도" style="width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: block;">
+</div>
 
-      <div class="btn-group">
-        <a href="https://map.kakao.com" target="_blank" class="btn">카카오맵</a>
-        <a href="https://map.naver.com" target="_blank" class="btn">네이버지도</a>
-        <a href="https://m.tmap.co.kr" target="_blank" class="btn">티맵</a>
-      </div>
+  <!-- 지도 바로가기 버튼 (수정된 부분) -->
+  <div class="btn-group">
+    <a href="https://map.kakao.com/?q=부천소풍컨벤션웨딩홀" target="_blank" class="btn">카카오맵</a>
+    <a href="https://map.naver.com/v5/search/부천소풍컨벤션웨딩홀" target="_blank" class="btn">네이버지도</a>
+    <a href="https://m.tmap.co.kr" target="부천소풍컨벤션웨딩홀" class="btn">티맵</a>
+  </div>
 
-      <!-- Traffic Details -->
-      <div class="traffic-info">
-        <div class="traffic-title">🚇 지하철 안내</div>
-        <p style="color:#ccc; margin-bottom: 12px;">7호선/상동역 1번 출구 도보 5분</p>
-        
-        <div class="traffic-title">🚌 버스 안내</div>
-        <p style="color:#ccc; margin-bottom: 12px;">상동역 하차: 01, 02, 03, 04, 05 </p>
-        
-        <div class="traffic-title">🚘 자차 & 주차 안내</div>
-        <p style="color:#ccc;">건물 내 지하 2층~지하 5층 주차장 (2시간 무료 주차 지원)</p>
-      </div>
-    </section>
+  <!-- Traffic Details -->
+  <div class="traffic-info">
+    <div class="traffic-title">🚇 지하철 안내</div>
+    <p style="color: #ccc; margin-bottom: 12px;">7호선/상동역 1번 출구 도보 5분</p>
+
+    <div class="traffic-title">🚌 버스 안내</div>
+    <p style="color: #ccc; margin-bottom: 12px;">상동역 하차: 01, 02, 03, 04, 05 등</p>
+
+    <div class="traffic-title">🚗 자차 & 주차 안내</div>
+    <p style="color: #ccc;">건물 내 지하 2층~지하 5층 주차장 (2시간 무료 주차 지원)</p>
+  </div>
+</section>
 
     <!-- 6. GUESTBOOK -->
     <section class="section">
